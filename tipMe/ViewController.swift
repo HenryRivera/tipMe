@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var sizeField: UITextField!
+    
+    @IBOutlet weak var splitCost: UILabel!
+    
+    var totalBill = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,10 +41,26 @@ class ViewController: UIViewController {
         let percentages = [0.15, 0.18, 0.20]
         let tip = bill * percentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
+        totalBill = total
         
         // Update tip and total labels
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    @IBAction func calcSplit(_ sender: Any) {
+        // Get amount of people
+        let groupSize = Double(sizeField.text!) ?? 0
+        
+        // Calculate split
+        let split = totalBill / groupSize
+        
+        // Update member owes label
+        if split.isFinite {
+            splitCost.text = String(format: "$%.2f", split)
+        }
+        else{
+            splitCost.text = "$0.00"
+        }
     }
 }
 
