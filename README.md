@@ -1,4 +1,4 @@
-Pre-work - tipMe
+#Pre-work - tipMe
 tipMe is a tip calculator application for iOS.
 
 Submitted by: Henry Rivera
