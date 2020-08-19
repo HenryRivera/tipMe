@@ -16,6 +16,6 @@ The following features are implemented:
 
 # Video Walkthrough
 
-(https://imgur.com/a/Nd4xrsy)
+![Alt Text](https://imgur.com/a/Nd4xrsy.gif)
 
 
