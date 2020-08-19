@@ -16,6 +16,6 @@ The following features are implemented:
 
 # Video Walkthrough
 
-![Alt Text](https://imgur.com/a/Nd4xrsy.gif)
+![Video Walkthrough](https://github.com/HenryRivera/tipMe/blob/master/appGif.gif)
 
 
